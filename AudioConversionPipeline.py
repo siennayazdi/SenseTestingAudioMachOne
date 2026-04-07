@@ -165,6 +165,8 @@ def run_pipeline(input_file):
         if os.path.exists(processed_audio):
             os.remove(processed_audio)
             print(f"\n✓ Cleaned up temporary file: {processed_audio}")
+
+        print(f"Final Transcript: {transcript}")
         
     except FileNotFoundError as e:
         print(f"❌ Error: {e}")
