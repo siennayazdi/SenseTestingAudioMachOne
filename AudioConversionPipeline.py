@@ -128,7 +128,12 @@ def run_pipeline(input_file):
         # Step 2: Transcription
         print()
         transcript = get_transcript(processed_audio)
-        print(f"\nTranscript Preview: {transcript[:100]}...\n")
+        if len(transcript) > 200:
+            print(f"\nTranscript Preview: {transcript[:100]}...\n")
+        else:
+            print(f"\nTranscript: {transcript}\n")
+
+        
         
         # Step 3: AI Detection
         print()
